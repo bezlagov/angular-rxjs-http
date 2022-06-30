@@ -1,0 +1,17 @@
+<p>Task 3</p>
+
+<input type="text" [(ngModel)] ="createItemInputText" />
+<button (click)="onClickAddItem();">Add</button>
+
+
+<ul>
+    <li *ngFor="let item of data">
+        <h2>{{item.exerciseName}}</h2>
+        <p>Attempts: {{item.attempts}}</p>
+        <p>Status: {{item.status}}</p>
+        <button (click)="onRemoveItem(item.id);">Remove</button>
+        <div><button (click)="onEditClick(item, inputStr.value)">Edit</button>
+            <input #inputStr type="text" />
+        </div>
+    </li>
+</ul>
